@@ -15,14 +15,14 @@ const songsReducer = () => {
       duration: "2:45"
     },
     {
-      title: "yohukashi no uta",
+      title: "yofukashi no uta",
       duration: "3:45"
     }
   ];
 };
 
 const selectedSongReducer = (selectedSong = null, action) => {
-  if (songsReducer.type === "SONG_SELECTED") {
+  if (action.type === "SONG_SELECTED") {
     return action.payload;
   }
 
